@@ -1,0 +1,338 @@
+.container {
+  max-width: 800px;
+  /* ← 今ここが狭いと縦長になる！1000px以上にしてみて！ */
+  margin: 0 auto;
+  padding: 40px 40px 40px 40px 60px;
+  background-color: transparent;
+  border-radius: 16px;
+  box-shadow: none;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #fffbf6;
+  color: #927860;
+  margin: 0;
+  padding: 0
+}
+
+.form-group {
+  display: flex;
+  align-items: flex-start;
+  /* ← align-items: center でもOK、見た目の好みによる */
+  margin-bottom: 25px;
+}
+
+.form-label {
+  min-width: 175px;
+  /* ← 120か180、揃えたい幅に合わせて調整！ */
+  padding-top: 10px;
+  margin-right: 20px;
+  text-align: left;
+  font-weight: bold;
+  color: #8B6D5C;
+  flex-shrink: 0;
+}
+
+.form-input.name-inputs {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.name-group {
+  display: flex;
+  align-items: center;
+}
+
+.name-group label {
+  width: 100px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.name-inputs {
+  display: flex;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+.name-inputs input {
+  flex: 1;
+}
+
+.radio-options {
+  display: flex;
+  gap: 30px;
+  /* 男性・女性・その他の間隔 */
+  flex-grow: 1;
+}
+
+.radio-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  color: #1b1a1a;
+  /* 通常の文字色 */
+  transition: color 0.3s ease;
+}
+
+.radio-options input[type="radio"] {
+  accent-color: #4d3d35;
+  /* 通常の選択色（茶系） */
+  cursor: pointer;
+}
+
+/* ホバー時：文字と枠の色が茶色っぽくなる */
+.radio-options label:hover {
+  color: #8b6d5c;
+  /* ホバー時の文字色 */
+}
+
+.radio-options label:hover input[type="radio"] {
+  accent-color: #8b6d5c;
+  /* ホバー時の色 */
+}
+
+/* 入力欄のスタイル統一 */
+.form-group input[type="email"],
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group textarea,
+.form-group select {
+  flex: 1;
+  resize: none;
+  padding: 10px;
+  border: none;
+  background-color: #fff7ee;
+  border-radius: 4px;
+}
+
+.email-input {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+}
+
+.tel-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.tel-group .form-label {
+  width: 120px;
+  margin-right: 20px;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.tel-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.tel-inputs input {
+  width: 80px;
+  padding: 10px;
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-size: 25px;
+}
+
+.tel-dash {
+  padding: 0 5px;
+}
+
+.address-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.address-group .form-label {
+  width: 120px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.address-group input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  /* ← この値で長さ調整可能 */
+  border: none;
+  background-color: #fff4e8;
+  border-radius: 4px;
+}
+
+.building-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.building-group .form-label {
+  width: 120px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.building-group input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  /* ← 長さはここで調整できるよ♪ */
+  border: none;
+  background-color: #fff4e8;
+  border-radius: 4px;
+}
+
+/* 横並びの基本構造 */
+.type-group {
+  display: flex;
+  align-items: center;
+  /* ← 縦位置を中央に揃える */
+  margin-bottom: 20px;
+}
+
+/* ラベルのスタイル */
+.type-group .form-label {
+  width: 160px;
+  /* ← ラベルの横幅（左の揃え位置調整） */
+  margin-right: 20px;
+  /* ← ラベルとselectの間の余白 */
+  font-weight: bold;
+  color: #7B5E50;
+}
+
+/* セレクトボックス */
+.soft-select {
+  width: 100%;
+  max-width: 300px;
+  /* ← セレクトボックスの横幅調整 */
+  padding: 10px;
+  border: none;
+  background-color: #b12020;
+  color: #e4b984;
+  font-family: 'Helvetica Neue', serif;
+  border-radius: 4px;
+
+  /* ▼アイコン */
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%234D3D35' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  /* ← ▼アイコンの位置調整 */
+  background-size: 16px 16px;
+}
+
+/* カーソル触れたとき */
+.soft-select:hover {
+  background-color: #ffffff;
+  /* ← 茶色系にホバー色変更 */
+  cursor: pointer;
+}
+
+.required-mark {
+  color: #ff7a70;
+  /* お好みで */
+  font-size: 90%;
+  margin-left: 4px;
+  /* 「内容」と※の間の余白 */
+}
+
+.form-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.form-textarea::placeholder {
+  color: #e1b096;
+}
+
+/* Chrome, Firefox, Safari */
+input::placeholder,
+textarea::placeholder {
+  color: #e1b096;
+  /* ← お好みの茶系にしてOK！ */
+  opacity: 1;
+}
+
+/* Internet Explorer 10–11 */
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #ccc;
+}
+
+input[type="text"] {
+  color: #e1b096;
+  font-size: 16px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+input[type="text"]:focus {
+  background-color: #fff2d4;
+  outline: none;
+}
+
+/* 入力後も背景色を維持（バリデーション通過時など） */
+input[type="text"]:valid {
+  background-color: #fef6f0;
+}
+
+/* バリデーションエラーメッセージ用 */
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* お名前用ラベル（左に寄せたい or 幅を調整したい） */
+.name-label {
+  min-width: 180px;
+  /* ← メールアドレスや住所と揃えると良き！ */
+  margin-right: 20px;
+  padding-top: 10px;
+  color: #8B6D5C;
+}
+
+/* 性別用ラベル */
+.gender-label {
+  min-width: 180px;
+  /* ← 他と同じ幅で揃えて */
+  margin-right: 20px;
+  padding-top: 10px;
+  color: #8B6D5C;
+}
+
+label.gender-label {
+  font-weight: bold;
+  font-size: 18px;
+  flex-shrink: 0;
+  /* 縮まないように固定 */
+  display: inline-block;
+  /* 左寄せを反映させるために追加 */
+  text-align: left;
+  /* 左寄せ指示（念のため） */
+}
+
+.nav__link[href*="register"] {
+  display: none;
+}
+
+.input-group {
+  overflow: visible;
+  /* ← 明示的に表示させる */
+}

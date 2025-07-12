@@ -1,1 +1,16 @@
 *.sqlite*
+/vendor
+/node_modules
+.env
+.env.*
+/storage/*.key
+/storage/*.log
+/public/storage
+/storage/app/public
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+.idea
+.DS_Store
