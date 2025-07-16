@@ -28,12 +28,8 @@ php artisan migrate
 ``` bash
 php artisan db:seed
 ```
-8. 使用技術
-- PHP  8.4.6
-- Laravel 8.83.29
-- MySQL 8.0.26 
-- phpMyAdmin（最新）
-- nginx 1.21.1
+8.権限付与
+ sudo chmod -R 777 src/*
 
 ## ER図
 ![ER図](docs/er.png)
