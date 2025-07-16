@@ -23,7 +23,6 @@ php artisan key:generate
 ``` bash
 php artisan migrate
 ```
-re
 7. シーディングの実行
 ``` bash
 php artisan db:seed

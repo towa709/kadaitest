@@ -1,4 +1,5 @@
 *.sqlite*
+<<<<<<< HEAD
 /vendor
 /node_modules
 .env
@@ -15,3 +16,5 @@ yarn-error.log
 .idea
 .DS_Store
 /docker/mysql/data/
+=======
+>>>>>>> 02935cfae6e4389fc87c44c75293cf7aa8b1e442
