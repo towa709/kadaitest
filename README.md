@@ -7,7 +7,9 @@
 **Laravel環境構築**
 1. `docker-compose exec php bash`
 2. `composer install`
-3. '.env.example'ファイルを コピーして'.env'を作成し、DBの設定を変更
+3. `composer update`
+4. 再び`composer install`
+5. '.env.example'ファイルを コピーして'.env'を作成し、DBの設定を変更
 ``` text
 DB_HOST=mysql
 DB_DATABASE=laravel_db
